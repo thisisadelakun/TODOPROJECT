@@ -1,0 +1,16 @@
+{% extends 'todo_list2.html' %}
+
+{% block content %}
+<center>
+    <h2>Crate a todo</h2>
+    <form action="" method="post">
+        {% csrf_token %} 
+        <!-- <input type="text" placeholder="taskname" >
+        <input type="text" placeholder="due_date" > -->
+        {{ form.as_p }} 
+        <button type="submit">
+            Submit
+        </button>
+    </form>
+</center>
+{% endblock %}    
